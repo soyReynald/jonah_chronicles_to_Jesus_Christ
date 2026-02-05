@@ -22,8 +22,17 @@
     </main>
 
     <script type="text/javascript">
+        var qinq_verse = document.getElmentById("qinq_verse");
+
         function generate_verse (question) {
 
+            if (question.indexOf()) {
+
+            };
+
+            qinq_verse.innerHTML += `
+                
+            `;
         };
     </script>
 </body>
