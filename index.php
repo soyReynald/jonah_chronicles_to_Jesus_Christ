@@ -8,12 +8,17 @@
 <body>
     
     <head>
-        <h1></h1>
+        <h1>Jonah Chronicles - Jesus Christ's oriented Quiz trivia</h1>
     </head>
     <main>
         <label for="question">Name
             <input type="text" name="">
         </label>
+
+        <label for="verse">
+            <textarea name="" id=""></textarea>
+        </label>
     </main>
+
 </body>
 </html>
