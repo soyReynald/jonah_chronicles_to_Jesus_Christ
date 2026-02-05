@@ -13,12 +13,18 @@
     <main>
         <label for="question">Name
             <input type="text" name="">
+            <!-- The question should contain the verse with the possible answer -->
         </label>
 
         <label for="verse">
-            <textarea name="" id=""></textarea>
+            <textarea name="verse_in_to_the_question" id="qinq_verse"></textarea>
         </label>
     </main>
 
+    <script type="text/javascript">
+        function generate_verse (question) {
+
+        };
+    </script>
 </body>
 </html>
