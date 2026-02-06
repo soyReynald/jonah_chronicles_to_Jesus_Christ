@@ -26,14 +26,16 @@
 
         function generate_verse (question) {
 
-            if (question.indexOf()) {
+            if (question.indexOf()) { // The indexOf is not exactly the best function
 
             };
 
             qinq_verse.innerHTML += `
-                
+
             `;
         };
+
+        // -> Is necessary to call the function here
     </script>
 </body>
 </html>
