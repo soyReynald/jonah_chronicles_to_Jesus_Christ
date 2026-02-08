@@ -23,5 +23,5 @@ As well as Donkeys:
 
 ## ----
 
-"Thou shall not put thy [A MI, "As" I Am] God to the test".
+"Thou shall not put thy [I Am - Answer given to Moses] God to the test".
 - Jesus Christ of Nazareth.
