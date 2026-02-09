@@ -36,6 +36,7 @@
         };
 
         // -> Is necessary to call the function here
+        generate_verse();
     </script>
 </body>
 </html>
