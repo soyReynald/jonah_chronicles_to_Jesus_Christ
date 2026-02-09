@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonah Cronicles - project with Jesus Christ of Nazareth</title>
+    <style type="text/css">
+        #question_answer {
+            margin-top: 10px;
+            display: block;
+        }
+
+        #question_input {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <head>
+        <h1>Jonah Chronicles - Jesus Christ's oriented Quiz trivia</h1>
+    </head>
+    <main>
+        <label for="question">Name
+            <input type="text" name="question_#_" id="question_input" placeholder="_[]..[%]_">
+            <!-- The question should contain the verse with the possible answer -->
+        </label>
+        <br/>
+        <label for="verse">
+            <textarea name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
+            </textarea>
+        </label>
+        <label for="question" id="question_answer">Answer
+            <textarea name="verse_in_to_the_question" id="question_answer" cols="70" rows="13">[..%].
+            </textarea>
+            <!-- The question should contain the verse with the possible answer -->
+        </label>
+    </main>
+
+    <script type="text/javascript">
+        var question_answer = document.getElementById("question_answer")
+        var qinq_verse = document.getElmentById("qinq_verse");
+
+        function generate_verse (question) {
+
+            if (question.qinq_verse) { // The indexOf is not exactly the best function
+
+            };
+
+            qinq_verse.innerHTML += `
+
+            `;
+        };
+
+        // -> Is necessary to call the function here
+        generate_verse();
+    </script>
+</body>
+</html>
