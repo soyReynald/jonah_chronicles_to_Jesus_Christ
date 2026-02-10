@@ -44,13 +44,15 @@
 
         function generate_verse (question) {
 
-            if (question.qinq_verse) { // The indexOf is not exactly the best function
+            if (question.qinq_verse.value == "") { 
+                question.qinq_verse.value = `Psalm 34:17`;
+            } else {
+                qinq_verse.value += `
+                    ,
+                `; // The secuence may continue..
+            }
 
-            };
-
-            qinq_verse.innerHTML += `
-
-            `;
+            
         };
 
         // -> Is necessary to call the function here
