@@ -16,3 +16,9 @@ Artistic-2.0
 "A good man from the good threasure of his heart takes good things and an EVIL man, from the EVIL threasure of his HEART takes out EVIL things".
 
 - Jesus Christ of Nazareth.
+
+## LATEST commands of GitHub used:
+
+### => git add .
+### => git push origin [name of the branch]..
+### => git checkout -b [name of the branch].. >>> [This one creates a new clean branch from a main or master branch].
