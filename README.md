@@ -22,3 +22,4 @@ Artistic-2.0
 ### => git add .
 ### => git push origin [name of the branch]..
 ### => git checkout -b [name of the branch].. >>> [This one creates a new clean branch from a main or master branch].
+### => git commit -m "[%] To insert a new change to the branch which is pointed the push"..
