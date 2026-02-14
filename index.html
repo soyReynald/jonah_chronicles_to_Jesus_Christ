@@ -35,12 +35,11 @@
             </textarea>
         </label>
         <label for="question" id="question_answer">Answer
-            <textarea name="verse_in_to_the_question" id="question_answer" cols="70" rows="13">
-            </textarea>
+            <textarea name="verse_in_to_the_question" id="question_answer" cols="70" rows="13"></textarea>
             <!-- The question should contain the verse with the possible answer -->
              <!-- Thank you because you listen to us Jesus Christ of Nazareth ... PsD: "reynald manuel rodriguez ramirez"-->
         </label>
-        <input type="submit" name="sent_form" value="Send response"/>
+        <input type="submit" name="sent_form" value="Send response" class="sent_btn_tag"/>
     </main>
 
     <script type="text/javascript">
@@ -52,9 +51,7 @@
             if (question == "") { 
                 qinq_verse.value = `Psalm 34:17`;
             } else {
-                qinq_verse.value += `
-                    ,
-                `; // The secuence may continue.. [https://www.hearthymn.com/encouraging-bible-verses.html?gad_source=1&gad_campaignid=22975785016&gbraid=0AAAAADG2MaQQGZI31Eyi3Xd2qIOdU7coc&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgmh6q4YFyXF751-g3GFITxKeiQPlKLbJCUpbxhCN2z7V1CWz5RHlCcaAkVxEALw_wcB]
+                qinq_verse.value += `,`; // The secuence may continue.. [https://www.hearthymn.com/encouraging-bible-verses.html?gad_source=1&gad_campaignid=22975785016&gbraid=0AAAAADG2MaQQGZI31Eyi3Xd2qIOdU7coc&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgmh6q4YFyXF751-g3GFITxKeiQPlKLbJCUpbxhCN2z7V1CWz5RHlCcaAkVxEALw_wcB]
             }            
         };
 
