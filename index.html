@@ -25,21 +25,23 @@
         <h1>Jonah Chronicles - Jesus Christ's oriented Quiz trivia</h1>
     </head>
     <main>
-        <label for="question">Name
-            <input type="text" name="question_#_" id="question_input" value="Was Joshua friend or servant of Moses?">
-            <!-- The question should contain the verse with the possible answer -->
-        </label>
-        <br/>
-        <label for="verse">
-            <textarea name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
-            </textarea>
-        </label>
-        <label for="question" id="question_answer">Answer
-            <textarea name="verse_in_to_the_question" id="question_answer" cols="70" rows="13"></textarea>
-            <!-- The question should contain the verse with the possible answer -->
-             <!-- Thank you because you listen to us Jesus Christ of Nazareth ... PsD: "reynald manuel rodriguez ramirez"-->
-        </label>
-        <input type="submit" name="sent_form" value="Send response" class="sent_btn_tag"/>
+        <form action="process_question.php" method="post">
+            <label for="question">Name
+                <input type="text" name="question_#_" id="question_input" value="Was Joshua friend or servant of Moses?">
+                <!-- The question should contain the verse with the possible answer -->
+            </label>
+            <br/>
+            <label for="verse">
+                <textarea name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
+                </textarea>
+            </label>
+            <label for="question" id="question_answer">Answer
+                <textarea name="verse_in_to_the_question" id="question_answer" cols="70" rows="13"></textarea>
+                <!-- The question should contain the verse with the possible answer -->
+                <!-- Thank you because you listen to us Jesus Christ of Nazareth ... PsD: "reynald manuel rodriguez ramirez"-->
+            </label>
+            <input type="submit" name="sent_form" value="Send response" class="sent_btn_tag"/>
+        </form>
     </main>
 
     <script type="text/javascript">
