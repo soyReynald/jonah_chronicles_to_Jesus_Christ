@@ -40,18 +40,19 @@
                 <!-- The question should contain the verse with the possible answer -->
                 <!-- Thank you because you listen to us Jesus Christ of Nazareth ... PsD: "reynald manuel rodriguez ramirez"-->
             </label>
+            <br/>
             <input type="submit" name="sent_form" value="Send response" class="sent_btn_tag"/>
         </form>
     </main>
 
     <script type="text/javascript">
-        var question_answer = document.getElementById("question_answer")
+        var question_answer = document.getElementById("question_answer");
         var qinq_verse = document.getElementById("qinq_verse");
 
         function generate_verse (question) {
 
             if (question == "") { 
-                qinq_verse.value = `Psalm 34:17`;
+                qinq_verse.value = `Reference verses: Book of Exodus, and Psalm 34:17`;
             } else {
                 qinq_verse.value += `Please, insert the verse.`; // The secuence may continue.. [https://www.hearthymn.com/encouraging-bible-verses.html?gad_source=1&gad_campaignid=22975785016&gbraid=0AAAAADG2MaQQGZI31Eyi3Xd2qIOdU7coc&gclid=Cj0KCQiAy6vMBhDCARIsAK8rOgmh6q4YFyXF751-g3GFITxKeiQPlKLbJCUpbxhCN2z7V1CWz5RHlCcaAkVxEALw_wcB]
             }            
