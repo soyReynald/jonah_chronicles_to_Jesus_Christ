@@ -59,6 +59,7 @@
         };
 
         // -> Is necessary to call the function here
+        // For I am good to the ungrateful, and to the wicked /.. - Jesus.
         generate_verse("");
     </script>
 </body>
