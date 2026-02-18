@@ -11,7 +11,7 @@
         <h1>Login area</h1>
     </header>
     <main>
-        <form action="action_page.php" method="post">
+        <form action="process_to_login.php" method="post">
             <div class="imgcontainer">
                 <img src="img_avatar2.png" alt="Avatar" class="avatar">
             </div>
