@@ -11,6 +11,8 @@
         <h1>Login area</h1>
     </header>
     <main>
+        <!-- This template was taken from internet basic common templates -->
+         <!-- In this case: Copy and pasting -->
         <form action="process_login.php" method="post">
             <div class="container">
                 <label for="uname"><b>Username</b></label>
