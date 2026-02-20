@@ -25,7 +25,7 @@
         <h1>Jonah Chronicles - Jesus Christ's oriented Quiz trivia</h1>
     </head>
     <main>
-        <form action="process_question.php" method="post">
+        <form action="private_includes/process_question.php" method="post">
             <label for="question">Name
                 <input type="text" name="question_#_" id="question_input" value="Was Joshua friend or servant of Moses?">
                 <!-- The question should contain the verse with the possible answer -->
