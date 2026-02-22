@@ -23,6 +23,7 @@
 
                 <button type="submit">Login</button>
                 <label>
+                    <!-- TODO: ## Pending -->
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>

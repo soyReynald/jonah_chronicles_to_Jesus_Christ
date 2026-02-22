@@ -2,21 +2,16 @@
 include_once("conexion.php");
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $question = $_POST['question'];
-    $verse_in_to_the_question = $_POST['verse_in_to_the_question'];
-    $question_answer = $_POST['question_answer'];
+    $username = $_POST['uname'];
+    $password = $_POST['psw'];
 
-    if (empty($question)) 
+    if (!empty($username) && !empty($password)) 
     {
-        echo "Please enter a question";
-    } elseif(empty($verse_in_to_the_question))
-    {
-        echo "Please enter a valid verse";
-    } elseif(empty($question_answer))
-    {
-        echo "Please enter a question verse";
+        // Process to enter to the quiz
+        //* todo: From the documentation, take the username and password to enter to the system trough the POST slight side.
+        ## Animal's procedural correct timing TODO: 9-13 days.
     } else {
-        echo "$question is valid and the answer is $question_answer";
+        echo "$username or $password are not correctly to be processed";
     }
   }
 
