@@ -13,7 +13,7 @@
     <main>
         <!-- This template was taken from internet basic common templates -->
          <!-- In this case: Copy and pasting -->
-        <form action="process_login.php" method="post">
+        <form action="private_includes/process_login.php" method="post">
             <div class="container">
                 <label for="uname"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="uname" required>

@@ -1,7 +1,7 @@
 <?php
 ## Here shall be the code to stablish the conexion in PHP.
 ## Stay hamless as doves, and caring as sheaps ... – Jesus Christ of Nazareth.
-
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $servername = "localhost";
 $username = "root";
 $password = "";
