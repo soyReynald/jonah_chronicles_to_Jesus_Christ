@@ -19,8 +19,9 @@ include_once("conexion.php");
       if(mysqli_num_rows($result) > 0){
         $password_sql = "SELECT * FROM `user_name_` WHERE `user_name_`.`password` = SHA1('$password')";
         $result_test = $conn->query($password_sql);
-        printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
-        echo "Verified successfully";
+        // printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
+        header("Location: index.php");
+        // echo "Verified successfully";
       }
         
     } else {
