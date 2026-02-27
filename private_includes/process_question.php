@@ -16,7 +16,7 @@ include_once("conexion.php");
     {
         echo "Please enter a question verse";
     } else {
-        echo "$question is valid and the answer is $question_answer";
+        echo "The question is: $question and is valid; The answer inserted is: $question_answer";
     }
   }
 ?>
