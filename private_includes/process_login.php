@@ -1,5 +1,5 @@
 <?php
-include_once("conexion.php");
+  include_once("conexion.php");
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['uname']);
@@ -20,7 +20,7 @@ include_once("conexion.php");
         $password_sql = "SELECT * FROM `user_name_` WHERE `user_name_`.`password` = SHA1('$password')";
         $result_test = $conn->query($password_sql);
         // printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
-        header("Location: index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
+        header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
         // echo "Verified successfully";
       }
         
