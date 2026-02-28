@@ -18,15 +18,24 @@
         #question_input {
             width: 400px;
         }
+        .main_formulary {
+            width: 70vw;
+            margin:auto;
+        }
+        header h1 {
+            width: 80vw;
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body>
     
-    <head>
+    <header>
         <h1>Jonah Chronicles - Jesus Christ's oriented Quiz trivia</h1>
-    </head>
+    </header>
     <main>
-        <form action="private_includes/process_question.php" method="post">
+        <form action="private_includes/process_question.php" method="post" class="main_formulary">
             <label for="question">Name
                 <input type="text" name="question" id="question_input" value="Was Joshua friend or servant of Moses?">
                 <!-- The question should contain the verse with the possible answer -->
