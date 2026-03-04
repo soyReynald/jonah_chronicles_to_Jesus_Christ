@@ -2,7 +2,7 @@
 <html version="5">
 
 <head>
-    <title>Login</title>
+    <title>Registration</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -29,10 +29,24 @@
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                     <form action="#" method="POST" class="space-y-6">
                         <div>
+                            <label for="username" class="block text-sm/6 font-medium text-black-100">User name</label>
+                            <div class="mt-2">
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                            </div>
+                        </div>
+
+                        <div>
                             <label for="username" class="block text-sm/6 font-medium text-black-100">Email
                                 address</label>
                             <div class="mt-2">
                                 <input type="text" placeholder="Enter Username" name="uname" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="username" class="block text-sm/6 font-medium text-black-100">Complete name</label>
+                            <div class="mt-2">
+                                <input type="text" placeholder="Enter your full name" name="cname" required>
                             </div>
                         </div>
 
@@ -51,14 +65,10 @@
 
                         <div>
                             <button type="submit"
-                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Sign
-                                in</button>
+                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register
+                            </button>
                         </div>
                     </form>
-
-                    <p class="mt-10 text-center text-sm/6 text-black-400">
-                        Register
-                    </p>
                 </div>
             </div>
         </form>

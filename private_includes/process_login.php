@@ -13,11 +13,11 @@
       /* this query with escaped $password will work */
 
       // In faith trough grace, in order knowing that we are saved not on means of our own works (Ephesians - WORDS of Jesus Christ of Nazareth taken by someone else).
-      $sql = "SELECT * FROM `user_name_` WHERE `user_name_`.`username` = '$username'";
+      $sql = "SELECT * FROM `users_name_table_` WHERE `users_name_table_`.`user_name` = '$username'";
       $result = $conn->query($sql);
 
       if(mysqli_num_rows($result) > 0){
-        $password_sql = "SELECT * FROM `user_name_` WHERE `user_name_`.`password` = SHA1('$password')";
+        $password_sql = "SELECT * FROM `users_name_table_` WHERE `users_name_table_`.`password_within_hash_` = SHA1('$password')";
         $result_test = $conn->query($password_sql);
         // printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
         header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
