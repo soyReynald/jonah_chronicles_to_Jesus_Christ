@@ -13,12 +13,12 @@
         <!-- In this case: Copy and pasting -->
         <form action="private_includes/process_login.php" method="post">
             <!--
-            This example requires updating your template:
+                This example requires updating your template:
 
-            ```
-            <html class="h-full bg-black-900">
-            <body class="h-full">
-            ```
+                ```
+                <html class="h-full bg-black-900">
+                <body class="h-full">
+                ```
             -->
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
