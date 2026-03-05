@@ -22,53 +22,53 @@
             -->
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+                    <img src="img/logo_login_.jpg" class="mt-10 ml-auto mr-auto" width="75" height="75">
                     <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight">Welcome to Jonah Chronicles
                     </h2>
                 </div>
 
                 <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                    <form action="#" method="POST" class="space-y-6">
                         <div>
-                            <label for="username" class="block text-sm/6 font-medium text-black-100">User name</label>
+                            <label for="username" class="block text-m font-medium text-black-100">User name</label>
                             <div class="mt-2">
-                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                <input type="text" placeholder="user_sample" name="uname" required>
                             </div>
                         </div>
 
                         <div>
-                            <label for="username" class="block text-sm/6 font-medium text-black-100">Email
+                            <label for="username" class="block text-m font-medium text-black-100">Email
                                 address</label>
                             <div class="mt-2">
-                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                <input type="text" placeholder="sample@sample.com" name="uname" required>
                             </div>
                         </div>
 
                         <div>
-                            <label for="username" class="block text-sm/6 font-medium text-black-100">Complete name</label>
+                            <label for="username" class="block text-m font-medium text-black-100">Complete name</label>
                             <div class="mt-2">
-                                <input type="text" placeholder="Enter your full name" name="cname" required>
+                                <input type="text" placeholder="Sample" name="cname" required>
                             </div>
                         </div>
 
                         <div>
                             <div class="flex items-center justify-between">
-                                <label for="password" class="block text-sm/6 font-medium text-black-100">Password</label>
+                                <label for="password" class="block text-m font-medium text-black-100">Password</label>
                                 <div class="text-sm">
                                     <a href="#" class="font-semibold text-indigo-400 hover:text-indigo-300">Forgot
                                         password?</a>
                                 </div>
                             </div>
                             <div class="mt-2">
-                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <input type="password" placeholder="******" name="psw" required>
                             </div>
                         </div>
 
                         <div>
+                            <br/>
                             <button type="submit"
                                 class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register
                             </button>
                         </div>
-                    </form>
                 </div>
             </div>
         </form>
