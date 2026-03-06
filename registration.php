@@ -39,7 +39,7 @@
                             <label for="username" class="block text-m font-medium text-black-100">Email
                                 address</label>
                             <div class="mt-2">
-                                <input type="text" placeholder="sample@sample.com" name="uname" required>
+                                <input type="text" placeholder="sample@sample.com" name="email" required>
                             </div>
                         </div>
 
@@ -65,9 +65,7 @@
 
                         <div>
                             <br/>
-                            <button type="submit"
-                                class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Register
-                            </button>
+                            <input type="submit" name="submitted_btn_" class="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500" value="Register" />
                         </div>
                 </div>
             </div>
