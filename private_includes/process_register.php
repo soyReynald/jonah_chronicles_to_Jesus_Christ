@@ -7,5 +7,11 @@ include_once("conexion.php");
         $email = $_POST['email'];
         $password = $_POST['password'];
         // You shall enter, but SLOWLY unless the ANIMALS come against you. — Reynald [old known Charlie] and Jesus Christ of Nazareth.
+
+        $sql = "INSERT INTO [..] ";
+
+        // mysqli_query($sql, $conn);
+
+        mysqli_close($conn);
     };
 ?>
