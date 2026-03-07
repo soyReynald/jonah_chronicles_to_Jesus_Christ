@@ -8,10 +8,15 @@ include_once("conexion.php");
         $password = $_POST['password'];
         // You shall enter, but SLOWLY unless the ANIMALS come against you. — Reynald [old known Charlie] and Jesus Christ of Nazareth.
 
-        $sql = "INSERT INTO [..] ";
+        $sql = "INSERT INTO `users_registry_` (`user_name`, `password_within_hash_`, `email`, `complete_name`) VALUES ('$username', SHA1('$password'), '$email', '$complete_name')";
 
-        // mysqli_query($sql, $conn);
+        if(mysqli_query($conn, $sql)){
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        };
 
         mysqli_close($conn);
+        // Missing the testing part of this...
     };
 ?>
