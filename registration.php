@@ -11,7 +11,7 @@
     <main>
         <!-- This template was taken from internet basic common templates -->
         <!-- In this case: Copy and pasting -->
-        <form action="private_includes/process_login.php" method="post">
+        <form action="private_includes/process_register.php" method="post">
             <!--
                 This example requires updating your template:
 
