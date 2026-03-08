@@ -2,10 +2,10 @@
 include_once("conexion.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $full_name = $_POST['cname'];
+        $cname = $_POST['cname'];
         $username = $_POST['uname'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = $_POST['psw'];
         // You shall enter, but SLOWLY unless the ANIMALS come against you. — Reynald [old known Charlie] and Jesus Christ of Nazareth.
 
         $sql = "INSERT INTO `users_registry_` (`user_name`, `password_within_hash_`, `email`, `complete_name`) VALUES ('$username', SHA1('$password'), '$email', '$complete_name')";
