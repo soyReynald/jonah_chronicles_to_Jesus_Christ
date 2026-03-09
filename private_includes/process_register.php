@@ -2,9 +2,9 @@
 include_once("conexion.php");
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $cname = $_POST['cname'];
-        $username = $_POST['uname'];
-        $email = $_POST['email'];
+        $cname = mysqli_real_escape_string($conn, $_POST['cname']);
+        $username = mysqli_real_escape_string($conn, $_POST['uname']);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
         $password = $_POST['psw'];
         // You shall enter, but SLOWLY unless the ANIMALS come against you. — Reynald [old known Charlie] and Jesus Christ of Nazareth.
 
