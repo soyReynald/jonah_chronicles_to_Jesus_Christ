@@ -19,8 +19,9 @@
             width: 400px;
         }
         .main_formulary {
-            width: 70vw;
-            margin:auto;
+            width: 52vw; /* The remaining porcentage is to give space to the page to unroll; Just as the acceleration of a car decreases when the velocity increases. */
+            margin: auto;
+            padding: 0% 23%;
         }
         header h1 {
             width: 80vw;
