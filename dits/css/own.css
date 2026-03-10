@@ -1,0 +1,63 @@
+#qinq_verse,
+input#question_input,
+.main_formulary textarea {
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+#question_answer {
+    margin-top: 10px;
+    display: block;
+}
+
+#question_input {
+    margin-top: 10px;
+    display: block;
+}
+
+#question_input {
+    width: 400px;
+}
+
+.main_formulary {
+    /* The remaining porcentage is to give space to the page to unroll; Just as the acceleration of a car decreases when the velocity increases. */
+    width: 12vw;
+    margin: auto;
+    padding: 0% 28%;
+    margin-bottom: 11px;
+    float: left;
+    /* This should be sized with viewports to display in different layouts */
+}
+
+.main_formulary > label {
+    font-weight: bold;
+}
+
+.main_formulary input, .main_formulary textarea, #question_answer textarea {
+    font-weight: normal;
+}
+
+header h1 {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sent_btn_tag {
+    padding: 5%;
+    border: 3px;
+    border-color: #000;
+    border-width: 3px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.sent_btn_tag:hover{
+    background-color:aliceblue;
+}

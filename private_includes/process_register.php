@@ -11,7 +11,8 @@ include_once("conexion.php");
         $sql = "INSERT INTO `users_registry_` (`user_name`, `password_within_hash_`, `email`, `complete_name`) VALUES ('$username', SHA1('$password'), '$email', '$cname')";
 
         if(mysqli_query($conn, $sql)){
-            echo "New record created successfully";
+            // echo "New record created successfully";
+            header("Location: index.php");
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         };
