@@ -19,14 +19,6 @@
         <!-- This template was taken from internet basic common templates -->
         <!-- In this case: Copy and pasting -->
         <form action="private_includes/process_login.php" method="post" class="space-y-6 user_login_form_">
-            <!--
-            This example requires updating your template:
-
-            ```
-            <html class="h-full bg-black-900">
-            <body class="h-full">
-            ```
-            -->
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img src="img/logo_login_.jpg" class="mt-10 ml-auto mr-auto" width="75" height="75">
