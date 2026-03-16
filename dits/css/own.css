@@ -6,6 +6,10 @@ input#question_input,
     padding: 7px;
 }
 
+#qinq_verse,
+.main_formulary textarea {
+    height: 140px;
+}
 #question_answer {
     margin-top: 10px;
     display: block;

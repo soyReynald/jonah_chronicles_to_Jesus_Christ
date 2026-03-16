@@ -14,8 +14,6 @@
 <body>
 
     <header>
-        <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
         <header class="bg-white">
             <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-6">
                 <div class="flex lg:flex-1">
@@ -34,12 +32,12 @@
     <main>
         <form action="private_includes/process_question.php" method="post" class="main_formulary">
             <label for="question">Name:
-                <input type="text" name="question" id="question_input" value="Was Joshua friend or servant of Moses?">
+                <input type="text" readonly name="question" id="question_input" value="Was Joshua friend or servant of Moses?">
                 <!-- The question should contain the verse with the possible answer -->
             </label>
             <br />
             <label for="verse">
-                <textarea name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
+                <textarea readonly name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
                 </textarea>
             </label>
             <label for="question" id="question_answer">Answer:
