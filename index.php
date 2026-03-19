@@ -1,4 +1,12 @@
 <?php session_start() ?>
+<?php 
+include_once("private_includes/conexion.php"); 
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+@$name = $_SESSION['name'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,16 +25,17 @@
         <header class="bg-white">
             <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-6">
                 <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <a href="./index.php" class="-m-1.5 p-1.5">
                         <img src="img/logo_login_.jpg" class="mt-10 ml-auto mr-auto" width="75" height="75">
                     </a>
                 </div>
                     <a href="#" class="text-sm/6 font-semibold text-gray-900 mr-5">Registration</a>
                     <div class="py-6">
-                        <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                        <a href="login.php" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
                     </div>
                     </div>
-                
+            </nav>
+            <h2>Welcome <?=  @$name; ?> </h2>
         </header>
     </header>
     <main>
