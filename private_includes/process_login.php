@@ -16,11 +16,11 @@
       /* this query with escaped $password will work */
 
       // In faith trough grace, in order knowing that we are saved not on means of our own works (Ephesians - WORDS of Jesus Christ of Nazareth taken by someone else).
-      $sql = "SELECT * FROM `users_registry_` WHERE `users_registry_`.`user_name` = '$username'";
+      $sql = "SELECT * FROM `user_registry_` WHERE `user_registry_`.`user_name` = '$username'";
       $result = $conn->query($sql);
 
       if(mysqli_num_rows($result) > 0){
-        $password_sql = "SELECT * FROM `users_registry_` WHERE `users_registry_`.`password_within_hash_` = SHA1('$password')";
+        $password_sql = "SELECT * FROM `user_registry_` WHERE `user_registry_`.`password_within_hash_` = SHA1('$password')";
 
         $result_twine_ = $conn->query($sql);
 
