@@ -4,7 +4,7 @@ session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-## Timer of updates - 1 hour range aproximately / TODAY is: 3/25/2026.
+## Timer of updates - TODAY is: 3/25/2026.
 @$name = "Reynald Manuel Rodriguez Ramirez";
 ?>
 <!DOCTYPE html>

@@ -4,6 +4,14 @@
   error_reporting(E_ALL);
   ini_set('display_errors', '1');
 
+/*
+  One space in the MEMORY saves the data to the HARD-DRIVE.
+  Because everytime that the HARD-DRIVE is reading, sometimes it also OVER-WRITES.
+
+  -- UPDATE 3/25/2026.
+  [Honor of mine is to cover one thing - JAH.]
+*/
+
   if ($_SERVER["REQUEST_METHOD"] == "POST" & isset($_POST['login'])) {
     $username = mysqli_real_escape_string($conn, $_POST['uname']);
     $password = $_POST['psw'];
