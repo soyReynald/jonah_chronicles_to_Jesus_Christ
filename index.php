@@ -4,7 +4,10 @@ session_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-## Timer of updates - TODAY is: 3/25/2026.
+## Timer of updates - TODAY is: 4/16/2026 - Lowing down the computer so that the work may be done faster.
+## Creating some sketches - In progress since: 4:16/2026 - 7:55 p.m;
+
+## In quiet and silence you shall find my strenght... & seek first the Kingdom of God and its justice and everything else shall be added unto it.
 @$name = "Reynald Manuel Rodriguez Ramirez";
 ?>
 <!DOCTYPE html>
