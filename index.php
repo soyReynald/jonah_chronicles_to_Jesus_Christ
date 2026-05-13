@@ -9,6 +9,10 @@ ini_set('display_errors', '1');
 
 ## In quiet and silence you shall find my strenght... & seek first the Kingdom of God and its justice and everything else shall be added unto it.
 @$name = "Reynald Manuel Rodriguez Ramirez";
+
+## TODO:
+## 1. To bring the info of the user from DB.
+## 2. To test all the  queries (login, questions, verses, insertion and the registration).
 ?>
 <!DOCTYPE html>
 <html lang="en">
