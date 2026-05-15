@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html version="5">
+<html version="5" lang="en">
 
 <head>
     <title>Registration</title>
