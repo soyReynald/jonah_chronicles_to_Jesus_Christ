@@ -8,7 +8,7 @@
   One space in the MEMORY saves the data to the HARD-DRIVE.
   Because everytime that the HARD-DRIVE is reading, sometimes it also OVER-WRITES.
 
-  -- UPDATE 5/15/2026.
+  -- UPDATE 5/21/2026.
   [Honor of mine is to cover one thing - JAH.]
 */
 
@@ -33,15 +33,15 @@
         $result_twine_ = $conn->query($sql);
 
         if(mysqli_num_rows($result_twine_) > 0){
-            while($row = $result->fetch_assoc()) {
-                echo $row['complete_name'];
-                exit();
+            while($row = $result->fetch_assoc()) {                
                 $_SESSION['complete_name'] = $row["complete_name"];
+
+                echo "session available: ". $_SESSION['complete_name'];
             }
         };
 
         // printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
-        header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
+        // header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
         // echo "Verified successfully";
       }
         
