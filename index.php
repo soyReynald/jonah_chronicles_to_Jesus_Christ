@@ -8,11 +8,11 @@ ini_set('display_errors', '1');
 ## Creating some sketches - In progress since: 4:16/2026 - 7:55 p.m;
 
 ## In quiet and silence you shall find my strenght... & seek first the Kingdom of God and its justice and everything else shall be added unto it.
-@$name = "Reynald Manuel Rodriguez Ramirez";
+@$name = $_SESSION['complete_name'];
 
 ## TODO:
-## 1. To bring the info of the user from DB.
-## 2. To test all the  queries (login, questions, verses, insertion and the registration).
+## 1. To bring the info of the user from DB ❇️.
+## 2. To test all the  queries (login ❇️, questions , verses, insertion and the registration).
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,7 @@ ini_set('display_errors', '1');
                     </div>
                     </div>
             </nav>
-            <h2>Welcome <?=  @$name; ?> </h2>
+            <h2 style="margin-left: 2%;">Welcome: <br/><?=  @$name; ?> </h2>
         </header>
     </header>
     <main>

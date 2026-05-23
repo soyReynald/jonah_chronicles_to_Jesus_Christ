@@ -1,10 +1,11 @@
 <?php
 include_once("conexion.php");
+## Animal's procedural correct timing TODO: 9-13 days [5/22/2026].
 
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $question = $_POST['question'];
-    $verse_in_to_the_question = $_POST['verse_in_to_the_question'];
-    $question_answer = $_POST['question_answer'];
+  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sent_form"])) {
+    $question = $conn->real_escape_string($_POST['question']);
+    $verse_in_to_the_question = $conn->real_escape_string($_POST['verse_in_to_the_question']);
+    $question_answer = $conn->real_escape_string($_POST['question_answer']);
 
     if (empty($question)) 
     {
@@ -23,7 +24,6 @@ include_once("conexion.php");
         /*
         // Process to insert a question
         //* todo: From the documentation, take the username and password to enter to the system trough the POST slight side.
-        ## Animal's procedural correct timing TODO: 9-13 days.
 
         // In faith trough grace, in order knowing that we are saved not on means of our own works (Ephesians - WORDS of Jesus Christ of Nazareth taken by someone else).
         $sql = "INSERT INTO ..";

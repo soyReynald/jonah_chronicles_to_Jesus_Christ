@@ -37,11 +37,12 @@
                 $_SESSION['complete_name'] = $row["complete_name"];
 
                 echo "session available: ". $_SESSION['complete_name'];
+                header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
             }
         };
 
         // printf("Select returned %d rows.\n", mysqli_num_rows($result_test));
-        // header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
+        
         // echo "Verified successfully";
       }
         
