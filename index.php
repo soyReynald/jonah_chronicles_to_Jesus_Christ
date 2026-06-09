@@ -12,7 +12,7 @@ ini_set('display_errors', '1');
 
 ## TODO:
 ## 1. To bring the info of the user from DB ❇️.
-## 2. To test all the  queries (login ❇️, questions , verses 🫡, insertion and the registration ❇️).
+## 2. To test all the  queries (login ❇️, questions , verses [TO-DO], insertion and the registration ❇️).
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +22,7 @@ ini_set('display_errors', '1');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonah Cronicles - project with Jesus Christ of Nazareth</title>
     <!-- Tailwind CDN Link -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
     <link rel="stylesheet" href="dits/css/own.css">
 </head>
 
@@ -36,13 +36,14 @@ ini_set('display_errors', '1');
                         <img src="img/logo_login_.jpg" class="mt-10 ml-auto mr-auto" width="75" height="75">
                     </a>
                 </div>
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900 mr-5">Registration</a>
+                    <a href="./private_includes/logout.php" class="text-sm/6 font-semibold text-red-900 mr-5">Logout</a>
+                    <a href="./registration.php" class="text-sm/6 font-semibold text-gray-900 mr-5">Registration</a>
                     <div class="py-6">
                         <a href="login.php" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
                     </div>
                     </div>
             </nav>
-            <h2 style="margin-left: 2%;">Welcome: <br/><?=  @$name; ?> </h2>
+            <h2 style="margin-left: 2%;"><?php if(isset($name)): ?> "Welcome:" <?php endif; ?> <br/><?=  @$name; ?> </h2>
         </header>
     </header>
     <main>
@@ -79,8 +80,7 @@ ini_set('display_errors', '1');
             }
         };
 
-        // -> Is necessary to call the function here
-        // For I am good to the ungrateful, and to the wicked /.. - Jesus.
+        // -> Is necessary to call the function here.
         generate_verse("");
     </script>
 </body>
