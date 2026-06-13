@@ -8,11 +8,8 @@ ini_set('display_errors', '1');
 ## Creating some sketches - In progress since: 4:16/2026 - 7:55 p.m;
 
 ## In quiet and silence you shall find my strenght... & seek first the Kingdom of God and its justice and everything else shall be added unto it.
-@$name = $_GET['complete_name'];
+// @$name = $_GET['complete_name'];
 
-## TODO:
-## 1. To bring the info of the user from DB ❇️.
-## 2. To test all the  queries (login ❇️, questions , verses [TO-DO], insertion and the registration ❇️).
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +20,7 @@ ini_set('display_errors', '1');
     <title>Jonah Cronicles - project with Jesus Christ of Nazareth</title>
     <!-- Tailwind CDN Link -->
     <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
+    <!-- <script src="dits/public/tailwindcss-3.4.17.js"></script> -->
     <link rel="stylesheet" href="dits/css/own.css">
 </head>
 
@@ -43,18 +41,18 @@ ini_set('display_errors', '1');
                     </div>
                     </div>
             </nav>
-            <h2 style="margin-left: 2%;"><?php if(isset($name)): ?> "Welcome:" <?php endif; ?> <br/><?=  @$name; ?> </h2>
+            <h2 style="margin-left: 2%;">Welcome<?php if(isset($name)): ?> ": " <?php endif; ?> <br/><?=  @$name; ?> </h2>
         </header>
     </header>
     <main>
         <form action="private_includes/process_question.php" method="post" class="main_formulary">
             <label for="question">Name:
-                <input type="text" readonly name="question" id="question_input" value="Was Joshua friend or servant of Moses?">
+                <input type="text" readonly name="question" id="question_input" value="" placeholder="Was Joshua friend or servant of Moses?">
                 <!-- The question should contain the verse with the possible answer -->
             </label>
             <br />
             <label for="verse">
-                <textarea readonly name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">Take heart, do not seek for your left or right; Keep your way straight. (Joshua 1:9; Holy Scriptures).
+                <textarea readonly name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">
                 </textarea>
             </label>
             <label for="question" id="question_answer">Answer:
