@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
 </head>
 
 <body>
@@ -47,9 +47,9 @@
                                 in</button>
                         </div>
 
-                    <p class="mt-10 text-center text-sm/6 text-black-400">
+                    <a href="registration.php" class="justify-center flex flex-col mt-10 text-center text-sm/6 text-black-400">
                         Register
-                    </p>
+                    </a>
                 </div>
             </div>
         </form>
