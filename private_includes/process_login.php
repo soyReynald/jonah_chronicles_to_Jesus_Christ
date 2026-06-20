@@ -37,7 +37,7 @@
                 $_SESSION['complete_name'] = $row["complete_name"];
 
                 echo "session available: ". $_SESSION['complete_name'];
-                header("Location: ../index.php"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
+                header("Location: ../index.php?userLoggedIn=true"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
             }
         };
 

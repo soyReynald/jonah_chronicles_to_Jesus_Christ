@@ -7,8 +7,14 @@ ini_set('display_errors', '1');
 
 ## In quiet and silence you shall find my strenght... 
 ## & seek first the Kingdom of God and its justice and everything else shall be added unto it.
-// @$name = $_GET['complete_name'];
 
+if(isset($_GET['userLoggedIn'])) { 
+    header("Location: index.php");
+} else if (isset($_SESSION['complete_name'])) {
+    @$name = $_SESSION['complete_name']; 
+} else {
+    $name = "Guest";
+};
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,7 +46,7 @@ ini_set('display_errors', '1');
                     </div>
                     </div>
             </nav>
-            <h2 style="margin-left: 2%;">Welcome<?php if(isset($name)): ?> ": " <?php endif; ?> <br/><?=  @$name; ?> </h2>
+            <h2 style="margin-left: 2%;">Welcome<?php if(isset($name)): ?>:  <?php endif; ?> <br/><?=  @$name; ?> </h2>
         </header>
     </header>
     <main>
