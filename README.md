@@ -8,7 +8,7 @@ properly, according to the verses that are in the Holy Scriptures.
 Pull requests from JESUS CHRIST OF NAZARETH allowed PEOPLE, AND not EVEN a SCRATCH of a thief.
 
 ## License
-
+// quote of qoute:
 Artistic-2.0
 
 ## Verse of support
