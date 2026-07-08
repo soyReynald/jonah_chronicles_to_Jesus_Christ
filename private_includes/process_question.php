@@ -38,7 +38,8 @@ include_once("conexion.php");
         $sql = "INSERT INTO games_question_ (question, verse_in_to_the_question, question_answer) VALUES ('{$question}', '{$verse_in_to_the_question}', '{$question_answer}')";
 
         if ($conn->multi_query($sql) === TRUE) {
-            echo "<br/>New records inserted successfully";
+            header("Location: ../index.php?answer='{$question_answer}'");
+            exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }     
