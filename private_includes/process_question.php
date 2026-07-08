@@ -1,6 +1,6 @@
 <?php
 include_once("conexion.php");
-## Animal's procedural correct timing TODO: 9-13 (-2) days [5/22/2026].
+    ## Animal's procedural updated at: 7/5/2026.
 
   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sent_form"])) {
     $question = $conn->real_escape_string($_POST['question']);
