@@ -25,29 +25,7 @@ if (isset($_GET['userLoggedIn'])) {
     <title>Jonah Cronicles - project with Jesus Christ of Nazareth</title>
     <!-- Tailwind CDN Link -->
     <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
-    <!-- <script src="dits/public/tailwindcss-3.4.17.js"></script> -->
     <link rel="stylesheet" href="dits/css/own.css">
-    <style>
-        #modal_btn {
-            z-index: 4000;
-            position: absolute;
-            color: black;
-            background: white;
-            border: 1px solid #000;
-            border-radius: 5px;
-        }
-
-        #default-modal {
-            overflow: hidden;
-            z-index: 10000;
-            position: absolute;
-            background: #525252f0;
-        }
-
-        #modal-capsule {
-            background: white;
-        }
-    </style>
 </head>
 
 <body>
@@ -106,7 +84,7 @@ if (isset($_GET['userLoggedIn'])) {
                 <!-- Modal header -->
                 <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
                     <h3 class="text-lg font-medium text-heading">
-                        Answer inerted
+                        Answer inserted
                     </h3>
                     <button type="button" class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -118,7 +96,7 @@ if (isset($_GET['userLoggedIn'])) {
                 <!-- Modal body -->
                 <div class="space-y-4 md:space-y-6 py-4 md:py-6">
                     <p class="leading-relaxed text-body">
-                        <?php echo $_GET['answer'] ?? 'No answer provided.'; ?>
+                        <?php echo trim($_GET['answer'], "'") ?? 'No answer provided.'; ?>
                     </p>
                 </div>
                 <!-- Modal footer -->

@@ -16,6 +16,7 @@ input#question_input,
 .main_formulary textarea {
     height: 140px;
 }
+
 #question_answer {
     margin-top: 10px;
     display: block;
@@ -40,11 +41,13 @@ input#question_input,
     /* This should be sized with viewports to display in different layouts */
 }
 
-.main_formulary > label {
+.main_formulary>label {
     font-weight: bold;
 }
 
-.main_formulary input, .main_formulary textarea, #question_answer textarea {
+.main_formulary input,
+.main_formulary textarea,
+#question_answer textarea {
     font-weight: normal;
 }
 
@@ -68,6 +71,28 @@ header h1 {
     cursor: pointer;
 }
 
-.sent_btn_tag:hover{
-    background-color:aliceblue;
+.sent_btn_tag:hover {
+    background-color: aliceblue;
+}
+
+/* COPY of the style that was in the index */
+
+#modal_btn {
+    z-index: 4000;
+    position: absolute;
+    color: black;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+#default-modal {
+    overflow: hidden;
+    z-index: 10000;
+    position: absolute;
+    background: #525252f0;
+}
+
+#modal-capsule {
+    background: white;
 }
