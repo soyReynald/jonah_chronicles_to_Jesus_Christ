@@ -72,7 +72,7 @@ if (isset($_GET['userLoggedIn'])) {
 
 
     <!-- Modal toggle -->
-    <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button" id="modal_btn">
+    <button style="display: none;" data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button" id="modal_btn">
         Toggle modal
     </button>
 
@@ -96,13 +96,15 @@ if (isset($_GET['userLoggedIn'])) {
                 <!-- Modal body -->
                 <div class="space-y-4 md:space-y-6 py-4 md:py-6">
                     <p class="leading-relaxed text-body">
-                        <?php echo trim($_GET['answer'], "'") ?? 'No answer provided.'; ?>
+                        <?php 
+                        $answer = mysqli_real_escape_string($conn, $_GET['answer']);
+                        
+                        echo trim($answer, "'") ?? 'No answer provided.'; ?>
                     </p>
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
-                    <button data-modal-hide="default-modal" type="button" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">I accept</button>
-                    <button data-modal-hide="default-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Decline</button>
+                    <button data-modal-hide="default-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
                 </div>
             </div>
         </div>
