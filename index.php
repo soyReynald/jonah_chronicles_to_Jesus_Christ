@@ -24,7 +24,7 @@ if (isset($_GET['userLoggedIn'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonah Cronicles - project with Jesus Christ of Nazareth</title>
     <!-- Tailwind CDN Link -->
-    <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="dits/css/own.css">
 </head>
 
@@ -69,43 +69,21 @@ if (isset($_GET['userLoggedIn'])) {
         </form>
     </main>
 
+    <!-- Main modal -->                
+  <div id="answer_modal" style="<?php if (!isset($_SESSION['answer'])): echo 'style="display: none;"'; endif;  ?>" class="h-screen flex items-center justify-center bg-gray-200 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="w-10/12 max-w-sm bg-white px-5 py-4 rounded-lg shadow-md">
+            <p class="font-bold text-xl mb-3.5">Answer inserted</p>
+            <p class="leading-relaxed text-body">
+                <?php 
+                    $answer = mysqli_real_escape_string($conn, $_GET['answer']);
+                    $answer_clean = trim($answer, "\'");
+                    echo $answer_clean ?? 'No answer provided.'; ?>
+            </p>
+            <p class="text-gray-400 text-base"></p>
 
-
-    <!-- Modal toggle -->
-    <button style="display: none;" data-modal-target="default-modal" data-modal-toggle="default-modal" class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none" type="button" id="modal_btn">
-        Toggle modal
-    </button>
-
-    <!-- Main modal -->
-    <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-2xl max-h-full">
-            <!-- Modal content -->
-            <div id="modal-capsule" class="relative bg-neutral-primary-soft border border-default rounded-base shadow-sm p-4 md:p-6">
-                <!-- Modal header -->
-                <div class="flex items-center justify-between border-b border-default pb-4 md:pb-5">
-                    <h3 class="text-lg font-medium text-heading">
-                        Answer inserted
-                    </h3>
-                    <button type="button" class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center" data-modal-hide="default-modal">
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6" />
-                        </svg>
-                        <span class="sr-only">Close modal</span>
-                    </button>
-                </div>
-                <!-- Modal body -->
-                <div class="space-y-4 md:space-y-6 py-4 md:py-6">
-                    <p class="leading-relaxed text-body">
-                        <?php 
-                        $answer = mysqli_real_escape_string($conn, $_GET['answer']);
-                        
-                        echo trim($answer, "'") ?? 'No answer provided.'; ?>
-                    </p>
-                </div>
-                <!-- Modal footer -->
-                <div class="flex items-center border-t border-default space-x-4 pt-4 md:pt-5">
-                    <button data-modal-hide="default-modal" type="button" class="text-body bg-neutral-secondary-medium box-border border border-default-medium hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Close</button>
-                </div>
+            <div class="flex items-center justify-center mt-7 mb-2">
+                <button class="bg-gray-300 text-gray-500 font-medium w-full py-2 mx-3 text-sm rounded-md" onclick="javascript: hidePopUp()">Cancel</button>
+                <button class="bg-blue-600 text-white w-full py-2 mx-3 text-sm rounded-md">Confirm</button>
             </div>
         </div>
     </div>
@@ -126,6 +104,11 @@ if (isset($_GET['userLoggedIn'])) {
 
         // -> Is necessary to call the function here.
         generate_verse("");
+
+        function hidePopUp() {
+            var modal = document.querySelector("#answer_modal");
+            modal.style.display = "none";
+        }
     </script>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>

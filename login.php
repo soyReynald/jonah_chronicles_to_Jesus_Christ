@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="dits/public/tailwindcss-3.4.17.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>

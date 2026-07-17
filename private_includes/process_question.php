@@ -1,6 +1,6 @@
 <?php
-include_once("conexion.php");
-    ## Animal's procedural updated at: 7/5/2026.
+    session_start();
+    include_once("conexion.php");
 
   if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["sent_form"])) {
     $question = $conn->real_escape_string($_POST['question']);
@@ -38,6 +38,7 @@ include_once("conexion.php");
         $sql = "INSERT INTO games_question_ (question, verse_in_to_the_question, question_answer) VALUES ('{$question}', '{$verse_in_to_the_question}', '{$question_answer}')";
 
         if ($conn->multi_query($sql) === TRUE) {
+            $_SESSION['answer'] = $question_answer;
             header("Location: ../index.php?answer='{$question_answer}'");
             exit();
         } else {
