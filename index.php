@@ -11,7 +11,7 @@ ini_set('display_errors', '1');
 if (isset($_GET['userLoggedIn'])) {
     header("Location: index.php");
 } else if (isset($_SESSION['complete_name'])) {
-    @$name = $_SESSION['complete_name'];
+    $name = $_SESSION['complete_name'];
 } else {
     $name = "Guest";
 };
@@ -50,7 +50,7 @@ if (isset($_GET['userLoggedIn'])) {
     </header>
     <main>
         <form action="private_includes/process_question.php" method="post" class="main_formulary">
-            <label for="question">Name:
+            <label for="question">Sample question:
                 <input type="text" readonly name="question" id="question_input" value="Was Joshua friend or servant of Moses?">
                 <!-- The question should contain the verse with the possible answer -->
             </label>
@@ -59,13 +59,13 @@ if (isset($_GET['userLoggedIn'])) {
                 <textarea readonly name="verse_in_to_the_question" id="qinq_verse" cols="70" rows="13">
                 </textarea>
             </label>
-            <label for="question" id="question_answer">Answer:
+            <label for="question" id="question_answer">Sample answer:
                 <textarea name="question_answer" id="question_answer" cols="70" rows="13"></textarea>
                 <!-- The question should contain the verse with the possible answer -->
                 <!-- Thank you because you listen to us Jesus Christ of Nazareth ... PsD: "reynald manuel rodriguez ramirez"-->
             </label>
             <br />
-            <input type="submit" name="sent_form" value="Send response" class="sent_btn_tag" />
+            <input type="submit" name="sent_form" value="<?php if(!isset($_SESSION['answer'])): echo "Sample sent"; endif; if(isset($_SESSION['answer'])): echo "Send response";  endif; ?>" class="sent_btn_tag" />
         </form>
     </main>
 
