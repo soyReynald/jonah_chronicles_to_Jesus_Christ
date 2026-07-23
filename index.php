@@ -70,7 +70,7 @@ if (isset($_GET['userLoggedIn'])) {
     </main>
 
     <!-- Main modal -->                
-  <div id="answer_modal" style="<?php if (!isset($_SESSION['answer'])): echo 'style="display: none;"'; endif;  ?>" class="h-screen flex items-center justify-center bg-gray-200 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+  <div id="answer_modal" style="<?php if (!isset($_SESSION['answer'])): echo 'display: none;'; endif;  ?>" class="h-screen flex items-center justify-center bg-gray-200 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
     <div class="w-10/12 max-w-sm bg-white px-5 py-4 rounded-lg shadow-md">
             <p class="font-bold text-xl mb-3.5">Answer inserted</p>
             <p class="leading-relaxed text-body">
