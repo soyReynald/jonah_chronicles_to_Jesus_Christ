@@ -82,8 +82,7 @@ if (isset($_GET['userLoggedIn'])) {
             <p class="text-gray-400 text-base"></p>
 
             <div class="flex items-center justify-center mt-7 mb-2">
-                <button class="bg-gray-300 text-gray-500 font-medium w-full py-2 mx-3 text-sm rounded-md" onclick="javascript: hidePopUp()">Cancel</button>
-                <button class="bg-blue-600 text-white w-full py-2 mx-3 text-sm rounded-md">Confirm</button>
+                <button class="bg-red-600 text-white w-full py-2 mx-3 text-sm rounded-md" onclick="javascript: hidePopUp()">Close</button>
             </div>
         </div>
     </div>

@@ -32,8 +32,26 @@
 
         $result_twine_ = $conn->query($sql);
 
-        if(mysqli_num_rows($result_twine_) > 0){
-            while($row = $result->fetch_assoc()) {                
+        if(mysqli_num_rows($result_twine_) > 0) {
+            $user_SELECTION_sql = "SELECT * FROM `users_registry_` WHERE `users_registry_`.`user_name` = '$username'";
+            $result_of_user_selection = $conn->query($user_SELECTION_sql);
+
+            // isolated retrieve from the petition
+            $_SESSION['id'] = $result_of_user_selection->fetch_assoc()['id'];
+
+            // isolated retrieve from the petition
+            $_SESSION['complete_name'] = $result_of_user_selection->fetch_assoc()['complete_name'];
+
+            // isolated retrieve from the petition ⚠️ is to be tested THE row: security_access
+            $_SESSION['security_access'] = $result_of_user_selection->fetch_assoc()['security_access'];
+
+            while($row = $result->fetch_assoc()) {    
+                /*
+                  $_SESSION global variable should save ONLY special fields that you get
+                  from the database and not on other MIXED petition.
+
+                */
+
                 $_SESSION['complete_name'] = $row["complete_name"];
 
                 echo "session available: ". $_SESSION['complete_name'];
