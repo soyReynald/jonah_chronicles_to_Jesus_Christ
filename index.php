@@ -1,20 +1,9 @@
 <?php
-include_once("private_includes/conexion.php");
 session_start();
+include_once("private_includes/conexion.php");
+include_once("private_includes/top_sessions.php");
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
-## In quiet and silence you shall find my strenght... 
-## & seek first the Kingdom of God and its justice and everything else shall be added unto it.
-
-if (isset($_GET['userLoggedIn'])) {
-    header("Location: index.php");
-} else if (isset($_SESSION['complete_name'])) {
-    $name = $_SESSION['complete_name'];
-} else {
-    $name = "Guest";
-};
+$name = start_header_user_sessions();
 ?>
 <!DOCTYPE html>
 <html lang="en">
