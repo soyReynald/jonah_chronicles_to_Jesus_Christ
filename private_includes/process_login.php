@@ -42,8 +42,10 @@
             // isolated retrieve from the petition
             $_SESSION['complete_name'] = $result_of_user_selection->fetch_assoc()['complete_name'];
 
-            // isolated retrieve from the petition ⚠️ is to be tested THE row: security_access
-            $_SESSION['security_access'] = $result_of_user_selection->fetch_assoc()['security_access'];
+            // isolated retrieve from the petition 
+            $_SESSION['privilage'] = $result_of_user_selection->fetch_assoc()['privilage_id'];
+
+
 
             while($row = $result->fetch_assoc()) {    
                 /*
@@ -52,9 +54,7 @@
 
                 */
 
-                $_SESSION['complete_name'] = $row["complete_name"];
-
-                echo "session available: ". $_SESSION['complete_name'];
+                
                 header("Location: ../index.php?userLoggedIn=true"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
             }
         };
