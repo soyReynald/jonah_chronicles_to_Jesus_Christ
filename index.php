@@ -27,14 +27,14 @@ $name = start_header_user_sessions();
                         <img src="img/logo_login_.jpg" class="mt-10 ml-auto mr-auto" width="75" height="75">
                     </a>
                 </div>
-                <a href="./private_includes/logout.php" class="text-sm/6 font-semibold text-red-900 mr-5">Logout</a>
+                <a href="./private_includes/logout.php" class="text-sm/6 font-semibold text-red-900 mr-5" <?php if($name == false): ?> <?= "style='display: none;'"; ?> <?php endif; ?>>Logout</a>
                 <a href="./registration.php" class="text-sm/6 font-semibold text-gray-900 mr-5">Registration</a>
-                <div class="py-6">
-                    <a href="login.php" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
-                </div>
+                    <div class="py-6">
+                        <a href="login.php" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log in</a>
+                    </div>
                 </div>
             </nav>
-            <h2 style="margin-left: 2%;">Welcome<?php if (isset($name)): ?>: <?php endif; ?> <br /><?= @$name; ?> </h2>
+            <h2 style="margin-left: 2%;">Welcome<?php if ($name == true): ?>: <?php endif; ?> <br /><?= @$name; ?> </h2>
         </header>
     </header>
     <main>

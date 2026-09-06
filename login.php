@@ -31,16 +31,22 @@
                             </svg>
                             </div>
                             <div class="flex-1">
-                            <h3 class="text-sm font-semibold text-gray-700">New update available</h3>
+                            <h3 class="text-sm font-semibold text-gray-700">Guess user available</h3>
                             <div class="mt-1">
-                                <p class="text-sm text-gray-600">A new update is available for the application. You can now update the application to the latest version.</p>
+                                <p class="text-sm text-gray-600">
+                                    We have an user GUESS available for you to use. BUT you only need the current passwords:
+                                </p>
+                                <p class="text-sm text-gray-600">
+                                    <br/>
+                                    Passwrods: ["test123*", "test1234*", "test12345*", "test12346*"].
+                                </p>
                             </div>
                             </div>
                         </div>
                     </div>
                     <!-- End of commentary to notification box -->
 
-                        <div>
+                        <div class="mt-6">
                             <label for="username" class="block text-sm/6 font-medium">Username or Email</label>
                             <div class="mt-2">
                                 <input type="text" placeholder="username" name="uname" required>
