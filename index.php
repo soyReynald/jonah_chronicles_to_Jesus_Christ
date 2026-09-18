@@ -18,7 +18,6 @@ $name = start_header_user_sessions();
 </head>
 
 <body>
-
     <header>
         <header class="bg-white">
             <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-6">

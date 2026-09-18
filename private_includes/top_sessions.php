@@ -1,9 +1,10 @@
 <?php 
+// [INNOVATION] by: Reynald M.
 function start_header_user_sessions($user_get = null) {
     error_reporting(E_ALL);
     ini_set('display_errors', '1');
 
-    $user_get = $_GET['userLoggedIn'] ?? null;
+    $user_get = $_GET['userLoggedIn'] ?? null; // [TO FIX]
     $user_name = $_SESSION['complete_name'] ?? null;
     $user_guest = "Guest";
     ## In quiet and silence you shall find my strenght... 

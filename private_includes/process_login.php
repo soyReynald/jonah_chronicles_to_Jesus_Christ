@@ -25,6 +25,7 @@
 
       // In faith trough grace, in order knowing that we are saved not on means of our own works (Ephesians - WORDS of Jesus Christ of Nazareth taken by someone else).
       $sql = "SELECT `users_registry_`.`complete_name`,`users_registry_`.`password_within_hash_` FROM `users_registry_` WHERE `users_registry_`.`user_name` = '$username'";
+      
       $result = $conn->query($sql);
 
       if(mysqli_num_rows($result) > 0){
