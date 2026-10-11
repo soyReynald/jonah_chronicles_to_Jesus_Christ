@@ -7,6 +7,9 @@
     $verse_in_to_the_question = $conn->real_escape_string($_POST['verse_in_to_the_question']);
     $question_answer = $conn->real_escape_string($_POST['question_answer']);
 
+    // Check variable to statement
+    $response = array('success'=>false);
+
     if (empty($question)) 
     {
         echo "Please enter a question";
@@ -35,12 +38,23 @@
         */
 
         // In faith trough grace, in order knowing that we are saved not on means of our own works (Ephesians - WORDS of Jesus Christ of Nazareth taken by someone else).
-        $sql = "INSERT INTO games_question_ (question, verse_in_to_the_question, question_answer) VALUES ('{$question}', '{$verse_in_to_the_question}', '{$question_answer}')";
+        $sql = "INSERT INTO games_question_ (question, verse_in_to_the_question, question_answer) VALUES (?, ?, ?)";
 
-        if ($conn->multi_query($sql) === TRUE) {
+        /* bind parameters for markers */
+        $smtp = $conn->prepare($sql);
+
+        //🙅‍♂️📌🫷Three is sign: STREGTH.
+        $smtp->bind_param("sss", $question, $verse_in_to_the_question, $question_answer);
+
+        /* execute query */
+        $smtp->execute();
+
+        $response["success"] = $smtp ? true : false;
+
+        if ($response === TRUE) {
             $_SESSION['answer'] = $question_answer;
+            sleep(5);
             header("Location: ../index.php?answer='{$question_answer}'");
-            exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }     
