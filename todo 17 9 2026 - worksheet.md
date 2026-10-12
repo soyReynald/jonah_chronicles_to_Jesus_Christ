@@ -9,7 +9,7 @@ To-do:
 
 ## CONCRETE to-do:
 ## If something happens between the dates, it should not alter the timing of PROCESS or DOING.
-1- Fix or work in SESSIONS - 13/9/2026.
+1- Fix or work in SESSIONS - 13/9/2026 - In progress.
 2- INSERT questions and use the users correctly - 14/9/2026, 19/9/2026.
 
 ## --

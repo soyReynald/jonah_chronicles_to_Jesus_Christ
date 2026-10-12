@@ -15,7 +15,7 @@ include_once("conexion.php");
             $sql = "SELECT `users_registry_`.`complete_name`,`users_registry_`.`password_within_hash_` FROM `users_registry_` WHERE `users_registry_`.`user_name` = '$username'";
             $result = $conn->query($sql);
             while($row = $result->fetch_assoc()) {  
-                header("Location: /jonah_chronicles/index.php?complete_name=".$row['complete_name']);
+                header("Location: ../index.php?complete_name=".$row['complete_name']);
             }
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);

@@ -49,9 +49,9 @@
         /* execute query */
         $smtp->execute();
 
-        $response["success"] = $smtp ? true : false;
+        $response["success"] = $smtp ? true : false; // was wrong only testing $response (for it is an array).
 
-        if ($response === TRUE) {
+        if ($response["success"] === true) {
             $_SESSION['answer'] = $question_answer;
             sleep(5);
             header("Location: ../index.php?answer='{$question_answer}'");

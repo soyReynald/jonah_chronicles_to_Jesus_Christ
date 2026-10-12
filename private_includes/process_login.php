@@ -37,26 +37,25 @@
             $user_SELECTION_sql = "SELECT * FROM `users_registry_` WHERE `users_registry_`.`user_name` = '$username'";
             $result_of_user_selection = $conn->query($user_SELECTION_sql);
 
-            // isolated retrieve from the petition
+            // ...
             $_SESSION['id'] = $result_of_user_selection->fetch_assoc()['id'];
 
-            // isolated retrieve from the petition
+            // ... 
             $_SESSION['complete_name'] = $result_of_user_selection->fetch_assoc()['complete_name'];
-
-            // isolated retrieve from the petition 
+          
+            // ...
             $_SESSION['privilage'] = $result_of_user_selection->fetch_assoc()['privilage_id'];
-
-
+            
+            // petition..
+            $_SESSION['email'] = $result_of_user_selection->fetch_assoc()['email'];
 
             while($row = $result->fetch_assoc()) {    
                 /*
                   $_SESSION global variable should save ONLY special fields that you get
                   from the database and not on other MIXED petition.
-
                 */
-
-                
-                header("Location: ../index.php?userLoggedIn=true"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
+                sleep(4);
+                header("Location: ../login.php?id=".$_SESSION['id']."&loggedIn=true"); // Do not shot the door in my face. — Jesus Christ of Nazareth.
             }
         };
 

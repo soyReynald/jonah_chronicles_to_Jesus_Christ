@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html version="5" lang="en">
+<?php
+session_start();
+if (isset($_SESSION["id"]) && isset($_GET['loggedIn'])) {
+    unset($_POST);
+    header("Location: index.php");
+}
 
+?>
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
@@ -45,7 +52,6 @@
                         </div>
                     </div>
                     <!-- End of commentary to notification box -->
-
                         <div class="mt-6">
                             <label for="username" class="block text-sm/6 font-medium">Username or Email</label>
                             <div class="mt-2">
