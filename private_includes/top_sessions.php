@@ -16,6 +16,7 @@ function start_header_user_sessions($user_get = null) {
         // TO-DO:
         // 1. To test if the user is not duplicated.
         // 2. To retrieve the data but NOT saving it on the NETWORK side & ensuring pasw with cookies.
+        // Took from an old note: -- Cookie to BE SAVED - PROJECTS prepared.
         sleep(4);
         header("Location: index.php");
     } else if (isset($user_name)) {
